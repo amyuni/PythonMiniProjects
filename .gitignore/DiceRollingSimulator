@@ -1,0 +1,21 @@
+# https://knightlab.northwestern.edu/2014/06/05/five-mini-programming-projects-for-the-python-beginner/
+# Dice Rolling Simulator
+
+import random
+
+def roll_dice(round):
+    no_round = int(round)
+    no_times = 1
+    
+    while True:
+        if no_round > 0:
+            dice1 = random.randint(1, 6)
+            dice2 = random.randint(1, 6)
+            print("#", no_times, "\tFirst Die: ", dice1, "\tSecond Die: ", dice2)
+            no_round -= 1
+            no_times += 1
+        elif no_round == 0:
+            break
+        
+    
+roll_dice(input("How many rounds would you like to roll the dice? "))
